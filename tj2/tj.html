@@ -1,0 +1,1433 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Trojan | Fastest Onchain Exchange for Memecoin & Crypto Trading
+    </title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              cinzel: ["Cinzel", "serif"],
+            },
+            colors: {
+              "trojan-green": "#00ff87",
+              "trojan-blue": "#60efff",
+            },
+            animation: {
+              "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .clip-hex {
+          clip-path: polygon(
+            50% 0%,
+            100% 25%,
+            100% 75%,
+            50% 100%,
+            0% 75%,
+            0% 25%
+          );
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-black text-white font-sans overflow-x-hidden selection:bg-[#00ff87]/30 selection:text-white"
+  >
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-[20px] border-b border-white/10"
+    >
+      <div
+        class="max-w-[1440px] mx-auto px-5 md:px-10 py-3 flex justify-between items-center"
+      >
+        <!-- Left Section: Logo, Text, Links -->
+        <div class="flex items-center gap-12">
+          <!-- Logo Container -->
+          <a href="#" class="flex items-center gap-3 decoration-0 group">
+            <img src="../trojan horse.jpg" alt="Logo" class="h-[30px] w-auto" />
+            <span
+              class="font-cinzel text-white text-xl font-bold tracking-[0.15em] uppercase group-hover:opacity-90 transition-opacity"
+              >Trojan</span
+            >
+          </a>
+
+          <!-- Navigation Links -->
+          <div class="hidden md:flex gap-8">
+            <a
+              href="#features"
+              class="font-sans text-[#e0e0e0] text-[15px] font-medium hover:text-white transition-colors"
+              >Features</a
+            >
+            <a
+              href="#partners"
+              class="font-sans text-[#e0e0e0] text-[15px] font-medium hover:text-white transition-colors"
+              >Communities</a
+            >
+            <a
+              href="#faqs"
+              class="font-sans text-[#e0e0e0] text-[15px] font-medium hover:text-white transition-colors"
+              >FAQs</a
+            >
+            <a
+              href="#blog"
+              class="font-sans text-[#e0e0e0] text-[15px] font-medium hover:text-white transition-colors"
+              >Blog</a
+            >
+          </div>
+        </div>
+
+        <!-- Right Section: Buttons -->
+        <!-- Right Section: Buttons -->
+        <div class="flex items-center gap-3">
+          <!-- The Arena Button -->
+          <a
+            href="./arena"
+            class="flex items-center gap-2 px-3.5 py-2 rounded-[10px] border border-[#facc15]/10 bg-[#facc15]/10 hover:opacity-80 transition-opacity"
+          >
+            <div class="w-[18px] h-[18px]">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" class="w-full h-full">
+                <path
+                  d="M2.774 5.862C3.323 6.093 4.045 6.283 4.875 6.427L4.875 14.285C4.184 14.155 3.619 13.998 3.21 13.825C2.943 13.714 2.774 13.608 2.681 13.525C2.66 13.507 2.642 13.488 2.625 13.467L2.625 5.797C2.674 5.82 2.724 5.841 2.774 5.862ZM15.375 13.467C15.358 13.488 15.34 13.507 15.32 13.525C15.227 13.608 15.057 13.714 14.79 13.825C14.381 13.998 13.817 14.155 13.125 14.285L13.125 6.427C13.955 6.283 14.678 6.093 15.226 5.862C15.277 5.841 15.326 5.819 15.375 5.797ZM15.673 3.355C15.256 3.116 14.69 2.918 14.039 2.76C12.728 2.441 10.947 2.25 9 2.25C7.053 2.25 5.272 2.441 3.962 2.76C3.311 2.918 2.744 3.116 2.327 3.355C1.952 3.572 1.5 3.938 1.5 4.5L1.5 13.5C1.5 13.877 1.709 14.165 1.931 14.364C2.154 14.563 2.45 14.727 2.774 14.863C3.427 15.137 4.323 15.355 5.357 15.505L6 15.598L6 12.544C6.9 12.437 7.919 12.375 9 12.375C10.002 12.372 11.004 12.429 12 12.544L12 15.598L12.644 15.505C13.677 15.354 14.573 15.137 15.226 14.863C15.551 14.726 15.846 14.563 16.07 14.364C16.291 14.165 16.5 13.877 16.5 13.5L16.5 4.5C16.5 3.938 16.048 3.572 15.673 3.355Z"
+                  fill="#ffc800"
+                />
+              </svg>
+            </div>
+            <span class="font-sans font-bold text-[#ffc800] text-sm tracking-normal uppercase leading-normal">THE ARENA</span>
+          </a>
+
+          <!-- Launch App Button -->
+          <a
+            href="https://trojan.com/terminal"
+            class="flex items-center gap-2 px-4 py-2 rounded-[10px] border border-[#8e949d1f] bg-[#0d1015] hover:bg-[#181c20] transition-colors"
+          >
+            <span class="font-sans font-medium text-[#c9ccd1] text-sm tracking-[-0.16px]">Launch App</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#c9ccd1] w-4 h-4"><path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/><path d="m21 3-9 9"/><path d="M15 3h6v6"/></svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Telegram Bot Banner
+    <div class="mt-[100px] md:mt-[120px] mb-[60px] mx-auto px-5 max-w-[1360px]">
+      <div
+        class="relative bg-gradient-to-br from-[#1a1a2e] to-[#0f0f1e] rounded-[20px] p-8 md:p-10 flex flex-col md:flex-row items-center justify-between border border-[#60efff]/20 overflow-hidden group"
+      >
+        <div
+          class="absolute -top-1/2 -left-1/2 w-[200%] h-[200%] bg-[radial-gradient(circle,rgba(96,239,255,0.1)_0%,transparent_70%)] animate-pulse-slow pointer-events-none"
+        ></div>
+
+        <div class="relative z-10 max-w-[600px]">
+          <div
+            class="w-[120px] h-[40px] bg-gradient-to-br from-trojan-green to-trojan-blue rounded-lg flex items-center justify-center font-bold text-black mb-5"
+          >
+            TELEGRAM
+          </div>
+          <h3 class="text-[28px] font-bold mb-4 leading-tight">
+            Looking to Trade Faster with The Leading Telegram Trading Bot for
+            Solana?
+          </h3>
+          <p class="text-[#b0b0b0] text-[16px] leading-relaxed mb-6">
+            Custom tools, automation, and advanced order placement, all
+            accessible directly in Telegram.
+          </p>
+          <a
+            href="https://trojanonsolana.com/links"
+            class="inline-block bg-gradient-to-br from-trojan-green to-trojan-blue text-black px-6 py-2.5 rounded-lg font-semibold text-[15px] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,255,135,0.4)] transition-all"
+            >On Telegram? Tap into the fastest Solana trading bot</a
+          >
+        </div>
+
+        <div
+          class="w-full md:w-[300px] h-[200px] mt-8 md:mt-0 bg-gradient-to-br from-[#2a2a3e] to-[#1a1a2e] rounded-xl flex items-center justify-center text-[#666] relative z-10"
+        >
+          Telegram Bot Interface
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Hero Section -->
+    <section
+      class="max-w-[1360px] mx-auto pt-[180px] pb-20 px-5 md:px-10 text-center relative flex flex-col items-center"
+    >
+      <!-- Trojan Logo -->
+      <div class="mb-8 hidden md:block">
+        <div class="w-[52px] h-[64px] mx-auto">
+          <img src="https://framerusercontent.com/images/0jFf17uSgqGoLNoLVets7WrCspI.svg" class="w-full h-full object-contain" alt="Trojan Logo">
+        </div>
+      </div>
+
+      <h1
+        class="text-[48px] md:text-[60px] font-bold leading-[1] mb-6 tracking-tight text-white max-w-[900px]"
+      >
+        Your Ultimate Onchain <br />
+        Trading Experience
+      </h1>
+
+      <p
+        class="text-[17px] md:text-[20px] text-[#8e949d] max-w-[640px] mx-auto mb-10 leading-[1.6] font-medium"
+      >
+        <span class="text-[#c9ccd1]">The best onchain tools. Your edge in the arena.</span> Buy, sell and snipe
+        instantly with Trojan. Exclusive real-time data and automation.
+      </p>
+
+      <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
+        <a
+          href="#"
+          class="bg-[#181c20] text-[#c9ccd1] border border-[#8e949d1f] px-5 py-2.5 rounded-[10px] font-medium text-[15px] hover:border-[#c9ccd1] hover:text-white transition-colors w-full md:w-auto text-center"
+          >Watch Video</a
+        >
+        <a
+          href="https://trojan.com/terminal"
+          class="group bg-[#f7f8f9] text-[#010409] px-5 py-2.5 rounded-[10px] font-medium text-[15px] hover:bg-white transition-colors flex items-center gap-2 overflow-hidden justify-center w-full md:w-auto"
+        >
+          <span>Start Trading</span>
+          <div class="relative w-4 h-4 overflow-hidden">
+            <svg
+              class="absolute inset-0 w-4 h-4 transition-transform duration-300 ease-in-out group-hover:translate-x-[150%]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              ></path>
+            </svg>
+            <svg
+              class="absolute inset-0 w-4 h-4 transition-transform duration-300 ease-in-out -translate-x-[150%] group-hover:translate-x-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              ></path>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      <!-- Wallet Icons -->
+      <div class="flex flex-wrap justify-center gap-2 md:gap-3 max-w-[800px]">
+        <!-- Phantom -->
+        <div class="w-7 h-7 md:w-8 md:h-8 bg-transparent hover:bg-[#181c20] rounded-lg flex items-center justify-center p-1.5 transition-colors duration-200">
+            <img src="./phantom_icon.png" class="w-full h-full object-contain" alt="Phantom">
+        </div>
+        <!-- Solflare -->
+        <div class="w-7 h-7 md:w-8 md:h-8 bg-transparent hover:bg-[#181c20] rounded-lg flex items-center justify-center p-1.5 transition-colors duration-200">
+             <svg viewBox="0 0 15 16" class="w-full h-full" style="image-rendering:pixelated" overflow="visible"><path d="M 7.655 8.71 L 8.767 7.636 L 10.84 8.314 C 12.198 8.766 12.877 9.597 12.877 10.764 C 12.877 11.65 12.538 12.235 11.858 12.988 L 11.65 13.215 L 11.726 12.688 C 12.028 10.765 11.463 9.935 9.597 9.333 Z M 4.865 2.132 L 10.52 4.017 L 9.293 5.185 L 6.353 4.203 C 5.335 3.865 4.996 3.318 4.863 2.168 L 4.863 2.13 Z M 4.526 11.708 L 5.808 10.482 L 8.22 11.273 C 9.483 11.689 9.916 12.235 9.784 13.61 L 4.525 11.707 Z M 2.903 6.239 C 2.903 5.881 3.091 5.542 3.412 5.259 C 3.751 5.749 4.335 6.183 5.259 6.485 L 7.257 7.145 L 6.145 8.219 L 4.185 7.578 C 3.281 7.278 2.903 6.825 2.903 6.239 Z M 8.822 16.136 C 12.969 13.385 15.193 11.518 15.193 9.219 C 15.193 7.691 14.289 6.843 12.292 6.183 L 10.782 5.675 L 14.911 1.715 L 14.081 0.83 L 12.856 1.904 L 7.069 0 C 5.278 0.585 3.016 2.3 3.016 4.015 C 3.016 4.203 3.035 4.392 3.091 4.6 C 1.602 5.448 0.999 6.239 0.999 7.219 C 0.999 8.144 1.489 9.067 3.054 9.576 L 4.298 9.991 L 0 14.12 L 0.83 15.005 L 2.169 13.781 L 8.823 16.137 Z" fill="rgb(255,239,70)"></path></svg>
+        </div>
+         <!-- Crypto.com -->
+        <div class="w-7 h-7 md:w-8 md:h-8 bg-transparent hover:bg-[#181c20] rounded-lg flex items-center justify-center p-1.5 transition-colors duration-200">
+              <svg viewBox="0 0 15 17" class="w-full h-full" style="image-rendering:pixelated" overflow="visible"><g><path d="M 4.608 3.952 L 10.261 3.952 L 10.943 6.87 L 3.952 6.87 L 4.606 3.952 Z M 8.677 8.94 L 9.281 7.31 L 5.62 7.31 L 6.237 8.941 L 6.048 10.769 L 7.445 10.769 L 8.852 10.761 L 8.677 8.941 Z" fill="rgb(247,249,250)"></path><path d="M 10.606 7.905 L 8.951 8.996 L 8.951 10.934 L 7.685 12.162 L 7.685 12.739 L 8.905 13.876 L 9.924 13.876 L 12.495 9.343 L 10.606 7.903 Z M 5.264 8.995 L 3.588 7.918 L 1.694 9.344 L 4.277 13.89 L 5.309 13.89 L 6.528 12.74 L 6.528 12.163 L 5.264 10.932 L 5.264 8.996 Z" fill="rgb(247,249,250)"></path><path d="M 0.019 4.374 L 7.502 0 L 15.005 4.384 L 15.005 13.152 L 7.504 17.537 L 7.484 17.526 L 0 13.153 L 0 4.384 Z M 7.502 0.895 L 0.767 4.833 L 0.767 12.706 L 7.502 16.643 L 14.239 12.706 L 14.239 4.833 Z" fill="rgb(247,249,250)"></path></g></svg>
+        </div>
+        <!-- Bitget -->
+        <div class="w-7 h-7 md:w-8 md:h-8 bg-transparent hover:bg-[#181c20] rounded-lg flex items-center justify-center p-1.5 transition-colors duration-200">
+             <img src="./bitget.png" class="w-full h-full object-contain" alt="Bitget">
+        </div>
+         <!-- Metamask -->
+        <div class="w-7 h-7 md:w-8 md:h-8 bg-transparent hover:bg-[#181c20] rounded-lg flex items-center justify-center p-1.5 transition-colors duration-200">
+             <svg viewBox="0 0 20 20" class="w-full h-full" style="image-rendering:pixelated" overflow="visible"><g><path d="M 0 0 L 20 0 L 20 20 L 0 20 Z" fill="transparent"></path><g transform="translate(2.5 3)"><path d="M 0 0 L 15 0 L 15 14 L 0 14 Z" fill="transparent"></path><path d="M 14.016 13.52 L 10.786 12.59 L 8.348 14 L 6.648 13.999 L 4.21 12.589 L 0.981 13.521 L 0 10.31 L 0.982 6.747 L 0 3.734 L 0.982 0 L 6.028 2.919 L 8.97 2.919 L 14.016 0 L 14.998 3.734 L 14.016 6.747 L 14.998 10.31 Z" fill="rgb(255,92,22)"></path><path d="M 0.983 0 L 6.029 2.92 L 5.829 4.926 L 0.982 0 Z M 4.213 10.311 L 6.433 11.949 L 4.213 12.589 Z M 6.255 7.604 L 5.828 4.927 L 3.097 6.747 L 3.095 6.747 L 3.095 6.748 L 3.104 8.622 L 4.211 7.604 Z M 14.015 0 L 8.97 2.92 L 9.17 4.926 L 14.016 0 Z M 10.787 10.311 L 8.567 11.949 L 10.787 12.589 Z M 11.903 6.748 L 11.903 6.747 L 11.902 6.747 L 9.171 4.927 L 8.744 7.604 L 10.787 7.604 L 11.895 8.622 Z" fill="rgb(255,92,22)"></path><path d="M 4.211 12.59 L 0.982 13.52 L 0 10.311 L 4.211 10.311 L 4.211 12.589 Z M 6.254 7.603 L 6.871 11.473 L 6.016 9.322 L 3.102 8.622 L 4.211 7.603 Z M 10.787 12.589 L 14.016 13.521 L 14.998 10.311 L 10.786 10.311 L 10.786 12.589 Z M 8.744 7.603 L 8.127 11.473 L 8.982 9.322 L 11.896 8.622 L 10.786 7.603 Z" fill="rgb(227,72,7)"></path><path d="M 0 10.31 L 0.982 6.747 L 3.095 6.747 L 3.102 8.621 L 6.016 9.321 L 6.871 11.473 L 6.431 11.947 L 4.211 10.309 L 0 10.309 Z M 14.998 10.31 L 14.016 6.747 L 11.903 6.747 L 11.895 8.621 L 8.982 9.321 L 8.127 11.473 L 8.567 11.947 L 10.787 10.309 L 14.998 10.309 Z M 8.97 2.919 L 6.028 2.919 L 5.828 4.923 L 6.871 11.471 L 8.127 11.471 L 9.171 4.923 Z" fill="rgb(255,141,93)"></path><path d="M 0.982 0 L 0 3.734 L 0.982 6.747 L 3.095 6.747 L 5.827 4.926 Z M 5.644 8.38 L 4.687 8.38 L 4.166 8.875 L 6.016 9.319 Z M 14.016 0 L 14.998 3.734 L 14.016 6.747 L 11.903 6.747 L 9.171 4.926 Z M 9.356 8.38 L 10.314 8.38 L 10.835 8.876 L 8.982 9.321 Z M 8.348 12.722 L 8.566 11.948 L 8.127 11.474 L 6.87 11.474 L 6.43 11.948 L 6.649 12.722" fill="rgb(102,24,0)"></path><path d="M 8.348 12.722 L 8.348 14 L 6.65 14 L 6.65 12.722 L 8.35 12.722 Z" fill="rgb(192,196,205)"></path><path d="M 4.212 12.588 L 6.65 13.999 L 6.65 12.721 L 6.432 11.947 L 4.212 12.587 Z M 10.787 12.588 L 8.348 13.999 L 8.348 12.721 L 8.566 11.947 L 10.786 12.587 Z" fill="rgb(231,235,246)"></path></g></g></svg>
+         </div>
+         <!-- OKX -->
+        <div class="w-7 h-7 md:w-8 md:h-8 bg-transparent hover:bg-[#181c20] rounded-lg flex items-center justify-center p-1.5 transition-colors duration-200">
+             <svg viewBox="0 0 13 13" class="w-full h-full" style="image-rendering:pixelated" overflow="visible"><path d="M 4.651 0 L 0 0 L 0 4.651 L 4.65 4.651 L 4.65 0.001 Z M 13.953 0 L 9.302 0 L 9.302 4.651 L 13.953 4.651 L 13.953 0.001 Z M 4.651 9.303 L 0 9.303 L 0 13.953 L 4.65 13.953 L 4.65 9.303 Z M 13.953 9.303 L 9.302 9.303 L 9.302 13.953 L 13.953 13.953 Z M 9.302 4.651 L 4.651 4.651 L 4.651 9.303 L 9.302 9.303 Z" fill="rgb(255,255,255)"></path></svg>
+        </div>
+         <!-- Backpack -->
+        <div class="w-7 h-7 md:w-8 md:h-8 bg-transparent hover:bg-[#181c20] rounded-lg flex items-center justify-center p-1.5 transition-colors duration-200">
+             <svg viewBox="0 0 11 16" class="w-full h-full" style="image-rendering:pixelated" overflow="visible"><g><path d="M 4.654 1.31 C 4.081 1.307 3.511 1.388 2.962 1.549 C 3.476 0.343 4.547 0 5.74 0 C 6.93 0 8 0.342 8.515 1.542 C 7.962 1.386 7.39 1.308 6.815 1.31 Z M 6.677 2.515 C 9.554 2.515 11.459 4.778 11.459 7.57 L 11.459 10.437 C 11.459 10.717 11.226 10.937 10.939 10.937 L 0.52 10.937 C 0.233 10.937 0 10.717 0 10.437 L 0 7.57 C 0 4.778 1.639 2.515 4.515 2.515 Z M 5.725 7.595 C 6.732 7.595 7.548 6.779 7.548 5.771 C 7.548 4.764 6.732 3.948 5.725 3.948 C 4.718 3.948 3.902 4.764 3.902 5.771 C 3.902 6.778 4.718 7.594 5.725 7.594 Z M 0 12.623 C 0 12.343 0.233 12.117 0.52 12.117 L 10.939 12.117 C 11.226 12.117 11.459 12.343 11.459 12.623 L 11.459 15.655 C 11.459 16.213 10.993 16.666 10.418 16.666 L 1.042 16.666 C 0.466 16.666 0 16.213 0 15.656 Z" fill="rgb(227,62,63)"></path></g></svg>
+        </div>
+         <!-- Trust -->
+        <div class="w-7 h-7 md:w-8 md:h-8 bg-transparent hover:bg-[#181c20] rounded-lg flex items-center justify-center p-1.5 transition-colors duration-200">
+             <svg viewBox="0 0 15 17" class="w-full h-full" style="image-rendering:pixelated" overflow="visible"><g><path d="M 0 0 L 15.872 0 L 15.872 17.5 L 0 17.5 Z" fill="transparent"></path><path d="M 0.289 2.716 L 7.908 0.246 L 7.908 17.34 C 2.466 15.06 0.289 10.692 0.289 8.224 Z" fill="rgb(5,0,255)"></path><g><defs><linearGradient id="idsEDFLdkRwvtS9OkyxAZ_4g90999250" x1="0.655011240103711" x2="0.34498875989628897" y1="0" y2="1"><stop offset="0" stop-color="rgb(72, 255, 145)" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(5,0,255)" stop-opacity="1"></stop></linearGradient></defs><path d="M 15.528 2.716 L 7.908 0.246 L 7.908 17.34 C 13.351 15.06 15.528 10.692 15.528 8.224 Z" fill="url(#idsEDFLdkRwvtS9OkyxAZ_4g90999250)"></path></g></g></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Device Showcase -->
+    <section class="max-w-[1360px] mx-auto my-20 px-5 md:px-10">
+    <section class="max-w-[1360px] mx-auto my-20 px-5 md:px-10">
+      <div class="flex flex-col gap-10">
+        <!-- Top - Navigation Buttons -->
+        <div class="flex flex-wrap gap-3 justify-center" id="showcase-tabs">
+          <button
+            onclick="setShowcase('trade')"
+            data-tab="trade"
+            class="showcase-btn active flex items-center gap-3 px-4 py-3 bg-white/[0.02] border border-white/[0.08] rounded-xl text-[#b0b0b0] font-semibold text-sm hover:bg-white/[0.04] hover:border-trojan-green/30 hover:text-white transition-all duration-300 focus:outline-none [&.active]:bg-trojan-green/[0.08] [&.active]:border-trojan-green/50 [&.active]:text-trojan-green"
+          >
+            <div
+              class="w-6 h-6 flex items-center justify-center shrink-0 text-current"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-full h-full stroke-current stroke-2"
+              >
+                <path
+                  d="M3 3V21H21M7 16L12 11L15 14L21 8M21 8V12M21 8H17"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <span>Trade</span>
+          </button>
+
+          <button
+            onclick="setShowcase('trenches')"
+            data-tab="trenches"
+            class="showcase-btn flex items-center gap-3 px-4 py-3 bg-white/[0.02] border border-white/[0.08] rounded-xl text-[#b0b0b0] font-semibold text-sm hover:bg-white/[0.04] hover:border-trojan-green/30 hover:text-white transition-all duration-300 focus:outline-none [&.active]:bg-trojan-green/[0.08] [&.active]:border-trojan-green/50 [&.active]:text-trojan-green"
+          >
+            <div
+              class="w-6 h-6 flex items-center justify-center shrink-0 text-current"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket-icon lucide-rocket"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+            </div>
+            <span>Trenches</span>
+          </button>
+
+          <button
+            onclick="setShowcase('explorer')"
+            data-tab="explorer"
+            class="showcase-btn flex items-center gap-3 px-4 py-3 bg-white/[0.02] border border-white/[0.08] rounded-xl text-[#b0b0b0] font-semibold text-sm hover:bg-white/[0.04] hover:border-trojan-green/30 hover:text-white transition-all duration-300 focus:outline-none [&.active]:bg-trojan-green/[0.08] [&.active]:border-trojan-green/50 [&.active]:text-trojan-green"
+          >
+            <div
+              class="w-6 h-6 flex items-center justify-center shrink-0 text-current"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sprout-icon lucide-sprout"><path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3"/><path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4"/><path d="M5 21h14"/></svg>
+            </div>
+            <span>Explorer</span>
+          </button>
+
+          <button
+            onclick="setShowcase('swap')"
+            data-tab="swap"
+            class="showcase-btn flex items-center gap-3 px-4 py-3 bg-white/[0.02] border border-white/[0.08] rounded-xl text-[#b0b0b0] font-semibold text-sm hover:bg-white/[0.04] hover:border-trojan-green/30 hover:text-white transition-all duration-300 focus:outline-none [&.active]:bg-trojan-green/[0.08] [&.active]:border-trojan-green/50 [&.active]:text-trojan-green"
+          >
+            <div
+              class="w-6 h-6 flex items-center justify-center shrink-0 text-current"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-full h-full stroke-current stroke-2"
+              >
+                <path
+                  d="M7 16V4M7 4L3 8M7 4L11 8M17 8V20M17 20L21 16M17 20L13 16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <span>Swap</span>
+          </button>
+
+          <button
+            onclick="setShowcase('holdings')"
+            data-tab="holdings"
+            class="showcase-btn flex items-center gap-3 px-4 py-3 bg-white/[0.02] border border-white/[0.08] rounded-xl text-[#b0b0b0] font-semibold text-sm hover:bg-white/[0.04] hover:border-trojan-green/30 hover:text-white transition-all duration-300 focus:outline-none [&.active]:bg-trojan-green/[0.08] [&.active]:border-trojan-green/50 [&.active]:text-trojan-green"
+          >
+            <div
+              class="w-6 h-6 flex items-center justify-center shrink-0 text-current"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-full h-full stroke-current stroke-2"
+              >
+                <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M3 5v14a2 2 0 0 0 2 2h16v-5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M18 12a2 2 0 0 0 0 4h4v-4Z" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <span>Holdings</span>
+          </button>
+
+          <button
+            onclick="setShowcase('analyzer')"
+            data-tab="analyzer"
+            class="showcase-btn flex items-center gap-3 px-4 py-3 bg-white/[0.02] border border-white/[0.08] rounded-xl text-[#b0b0b0] font-semibold text-sm hover:bg-white/[0.04] hover:border-trojan-green/30 hover:text-white transition-all duration-300 focus:outline-none [&.active]:bg-trojan-green/[0.08] [&.active]:border-trojan-green/50 [&.active]:text-trojan-green"
+          >
+            <div
+              class="w-6 h-6 flex items-center justify-center shrink-0 text-current"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-full h-full stroke-current stroke-2"
+              >
+                <path d="M21.21 15.89A10 10 0 1 1 8 2.83" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M22 12A10 10 0 0 0 12 2v10z" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <span>Analyzer</span>
+          </button>
+        </div>
+
+        <!-- Right Side - Main Display -->
+        <div class="relative w-full min-h-[500px] md:min-h-[700px]">
+          <!-- Template for showcase content -->
+          <div
+            class="showcase-content absolute top-0 left-0 w-full opacity-0 invisible transition-all duration-500 ease-in-out [&.active]:opacity-100 [&.active]:visible [&.active]:relative"
+            data-content="trade"
+          >
+            <div
+              class="w-full h-[500px] md:h-[700px] bg-[#0a0a0a] rounded-3xl border border-white/[0.08] relative overflow-hidden flex items-center justify-center shadow-2xl"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] pointer-events-none"
+              ></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-trojan-green/[0.03] to-transparent pointer-events-none"
+              ></div>
+              <img
+                src="./trade.avif"
+                class="w-full h-full object-cover opacity-80"
+                alt="Trade Interface"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 to-transparent"
+              >
+                <div class="text-xl font-semibold text-white">
+                  Trade Interface
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="showcase-content absolute top-0 left-0 w-full opacity-0 invisible transition-all duration-500 ease-in-out [&.active]:opacity-100 [&.active]:visible [&.active]:relative"
+            data-content="trenches"
+          >
+            <div
+              class="w-full h-[500px] md:h-[700px] bg-[#0a0a0a] rounded-3xl border border-white/[0.08] relative overflow-hidden flex items-center justify-center shadow-2xl"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] pointer-events-none"
+              ></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-trojan-green/[0.03] to-transparent pointer-events-none"
+              ></div>
+              <img
+                src="./trenches.avif"
+                class="w-full h-full object-cover opacity-80"
+                alt="Trenches View"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 to-transparent"
+              >
+                <div class="text-xl font-semibold text-white">
+                  Trenches - New Token Launches
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="showcase-content absolute top-0 left-0 w-full opacity-0 invisible transition-all duration-500 ease-in-out [&.active]:opacity-100 [&.active]:visible [&.active]:relative"
+            data-content="explorer"
+          >
+            <div
+              class="w-full h-[500px] md:h-[700px] bg-[#0a0a0a] rounded-3xl border border-white/[0.08] relative overflow-hidden flex items-center justify-center shadow-2xl"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] pointer-events-none"
+              ></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-trojan-green/[0.03] to-transparent pointer-events-none"
+              ></div>
+              <img
+                src="./explore.avif"
+                class="w-full h-full object-cover opacity-80"
+                alt="Explorer Dashboard"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 to-transparent"
+              >
+                <div class="text-xl font-semibold text-white">
+                  Explorer - Token Search
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="showcase-content absolute top-0 left-0 w-full opacity-0 invisible transition-all duration-500 ease-in-out [&.active]:opacity-100 [&.active]:visible [&.active]:relative"
+            data-content="swap"
+          >
+            <div
+              class="w-full h-[500px] md:h-[700px] bg-[#0a0a0a] rounded-3xl border border-white/[0.08] relative overflow-hidden flex items-center justify-center shadow-2xl"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] pointer-events-none"
+              ></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-trojan-green/[0.03] to-transparent pointer-events-none"
+              ></div>
+              <img
+                src="./swap.avif"
+                class="w-full h-full object-cover opacity-80"
+                alt="Swap Interface"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 to-transparent"
+              >
+                <div class="text-xl font-semibold text-white">
+                  Swap - Quick Exchange
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="showcase-content absolute top-0 left-0 w-full opacity-0 invisible transition-all duration-500 ease-in-out [&.active]:opacity-100 [&.active]:visible [&.active]:relative"
+            data-content="holdings"
+          >
+            <div
+              class="w-full h-[500px] md:h-[700px] bg-[#0a0a0a] rounded-3xl border border-white/[0.08] relative overflow-hidden flex items-center justify-center shadow-2xl"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] pointer-events-none"
+              ></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-trojan-green/[0.03] to-transparent pointer-events-none"
+              ></div>
+              <img
+                src="./holdings.avif"
+                class="w-full h-full object-cover opacity-80"
+                alt="Holdings Portfolio"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 to-transparent"
+              >
+                <div class="text-xl font-semibold text-white">
+                  Holdings - Portfolio Overview
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="showcase-content absolute top-0 left-0 w-full opacity-0 invisible transition-all duration-500 ease-in-out [&.active]:opacity-100 [&.active]:visible [&.active]:relative"
+            data-content="analyzer"
+          >
+            <div
+              class="w-full h-[500px] md:h-[700px] bg-[#0a0a0a] rounded-3xl border border-white/[0.08] relative overflow-hidden flex items-center justify-center shadow-2xl"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] pointer-events-none"
+              ></div>
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-trojan-green/[0.03] to-transparent pointer-events-none"
+              ></div>
+              <img
+                src="./analyzer.avif"
+                class="w-full h-full object-cover opacity-80"
+                alt="Analyzer Tools"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 to-transparent"
+              >
+                <div class="text-xl font-semibold text-white">
+                  Analyzer - Wallet PNL
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        // Showcase tab switching functionality
+        const showcaseTabs = [
+          "trade",
+          "trenches",
+          "explorer",
+          "swap",
+          "holdings",
+          "analyzer",
+        ];
+        let currentShowcaseIndex = 0;
+
+        function setShowcase(tab) {
+          // Remove active class from all buttons
+          document.querySelectorAll(".showcase-btn").forEach((btn) => {
+            btn.classList.remove("active");
+          });
+
+          // Add active class to clicked button
+          const activeBtn = document.querySelector(`[data-tab="${tab}"]`);
+          if (activeBtn) {
+            activeBtn.classList.add("active");
+          }
+
+          // Hide all showcase content
+          document.querySelectorAll(".showcase-content").forEach((content) => {
+            content.classList.remove("active");
+          });
+
+          // Show selected showcase content
+          const activeContent = document.querySelector(
+            `[data-content="${tab}"]`,
+          );
+          if (activeContent) {
+            activeContent.classList.add("active");
+          }
+
+          // Sync index if manually clicked
+          const index = showcaseTabs.indexOf(tab);
+          if (index !== -1) {
+            currentShowcaseIndex = index;
+          }
+        }
+
+        // Initialize default state
+        document.addEventListener("DOMContentLoaded", () => {
+          setShowcase("trade");
+        });
+      </script>
+    </section>
+
+    <!-- Terminal Section -->
+    <section
+      class="max-w-[1360px] mx-auto my-20 md:my-30 px-5 md:px-10 text-center"
+      id="features"
+    >
+      <h2 class="text-[36px] md:text-[48px] font-extrabold mb-5 text-white">
+        One terminal. Built for traders by traders.
+      </h2>
+      <p
+        class="text-[20px] text-[#b0b0b0] max-w-[900px] mx-auto leading-relaxed"
+      >
+        Our products are designed with all traders in mind, from beginners to
+        seasoned pros. Step into the
+        <a
+          href="#arena"
+          class="text-trojan-green border-b border-trojan-green hover:opacity-70 transition-opacity"
+          >arena</a
+        >
+        with the best onchain tools to stay ahead of the rest.
+      </p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="max-w-[1360px] mx-auto my-24 px-5 md:px-10">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-16"
+      >
+        <!-- Feature Card 1 -->
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-[20px] overflow-hidden hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[300px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-trojan-green/5 to-transparent"
+            ></div>
+            Market Orders
+          </div>
+          <div class="p-8">
+            <h6 class="text-[20px] font-bold mb-3 text-white">Market Orders</h6>
+            <p class="text-[#b0b0b0] text-[15px] leading-relaxed">
+              Buy and Sell at the speed of Trojan. Fully optimized to ensure
+              you're first, every trade.
+            </p>
+          </div>
+        </div>
+        <!-- Feature Card 2 -->
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-[20px] overflow-hidden hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[300px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-trojan-green/5 to-transparent"
+            ></div>
+            Limit & DCA Orders
+          </div>
+          <div class="p-8">
+            <h6 class="text-[20px] font-bold mb-3 text-white">
+              Limit & DCA Orders
+            </h6>
+            <p class="text-[#b0b0b0] text-[15px] leading-relaxed">
+              Deploy your strategy onchain with precision using Trojan's Limit
+              Orders or DCA automations.
+            </p>
+          </div>
+        </div>
+        <!-- Feature Card 3 -->
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-[20px] overflow-hidden hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[300px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-trojan-green/5 to-transparent"
+            ></div>
+            Multi-Wallet
+          </div>
+          <div class="p-8">
+            <h6 class="text-[20px] font-bold mb-3 text-white">Multi-Wallet</h6>
+            <p class="text-[#b0b0b0] text-[15px] leading-relaxed">
+              Place orders across multiple wallets. Distribute, consolidate, and
+              withdraw in just a few clicks.
+            </p>
+          </div>
+        </div>
+        <!-- Feature Card 4 -->
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-[20px] overflow-hidden hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[300px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-trojan-green/5 to-transparent"
+            ></div>
+            Trenches
+          </div>
+          <div class="p-8">
+            <h6 class="text-[20px] font-bold mb-3 text-white">Trenches</h6>
+            <p class="text-[#b0b0b0] text-[15px] leading-relaxed">
+              Every new token, every platform, all on one page. Find your edge
+              in the Trenches with the fastest data and clear, concise token
+              insights.
+            </p>
+          </div>
+        </div>
+        <!-- More features... -->
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-[20px] overflow-hidden hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[300px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-trojan-green/5 to-transparent"
+            ></div>
+            Social Tracker
+          </div>
+          <div class="p-8">
+            <h6 class="text-[20px] font-bold mb-3 text-white">
+              Social Tracker
+            </h6>
+            <p class="text-[#b0b0b0] text-[15px] leading-relaxed">
+              Breaking news in real time, with instant alerts as it unfolds. Now
+              including TruthSocial.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-[20px] overflow-hidden hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[300px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-trojan-green/5 to-transparent"
+            ></div>
+            Wallet Tracker
+          </div>
+          <div class="p-8">
+            <h6 class="text-[20px] font-bold mb-3 text-white">
+              Wallet Tracker
+            </h6>
+            <p class="text-[#b0b0b0] text-[15px] leading-relaxed">
+              Track any wallet with custom tags, real-time alerts, and a
+              streaming list of the wallet's activity.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-[20px] overflow-hidden hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[300px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-trojan-green/5 to-transparent"
+            ></div>
+            Wallet Analyzer
+          </div>
+          <div class="p-8">
+            <h6 class="text-[20px] font-bold mb-3 text-white">
+              Wallet Analyzer
+            </h6>
+            <p class="text-[#b0b0b0] text-[15px] leading-relaxed">
+              Instantly gain valuable insights into any wallet's activity,
+              holdings, and performance with our Analyzer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Tools -->
+    <section class="max-w-[1360px] mx-auto my-24 px-5 md:px-10">
+      <h2
+        class="text-[36px] md:text-[48px] font-extrabold text-center mb-16 text-white"
+      >
+        Everything you need to escape the trenches
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Tool Cards -->
+        <div
+          class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <h6 class="text-[18px] font-bold mb-3 text-white">Copy Trading</h6>
+          <p class="text-[#b0b0b0] text-[14px] leading-relaxed">
+            Copy a wallet's buys and sells with precision and endless
+            customizable options.
+          </p>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <h6 class="text-[18px] font-bold mb-3 text-white">Token Audits</h6>
+          <p class="text-[#b0b0b0] text-[14px] leading-relaxed">
+            Instant insights to contract functions, sniped and bundled
+            percentages, top holders and more.
+          </p>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <h6 class="text-[18px] font-bold mb-3 text-white">
+            Real-Time Alerts
+          </h6>
+          <p class="text-[#b0b0b0] text-[14px] leading-relaxed">
+            The most important notifications you need in-app, from tracked
+            wallet trades to migration alerts.
+          </p>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <h6 class="text-[18px] font-bold mb-3 text-white">
+            Most Complete Data
+          </h6>
+          <p class="text-[#b0b0b0] text-[14px] leading-relaxed">
+            Access years of onchain history. Every buy, sell, mint, burn, and
+            more, on even the oldest tokens.
+          </p>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <h6 class="text-[18px] font-bold mb-3 text-white">24/7 Support</h6>
+          <p class="text-[#b0b0b0] text-[14px] leading-relaxed">
+            Live support whenever you need it. Our support team is standing by
+            to answer your questions.
+          </p>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <h6 class="text-[18px] font-bold mb-3 text-white">Watchlists</h6>
+          <p class="text-[#b0b0b0] text-[14px] leading-relaxed">
+            Quickly create, label, and organize lists of tickers to keep track
+            of potential gems.
+          </p>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <h6 class="text-[18px] font-bold mb-3 text-white">Perpetuals</h6>
+          <p class="text-[#b0b0b0] text-[14px] leading-relaxed">
+            Trade perpetuals directly onchain with speed, precision, and zero
+            compromise.
+          </p>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <h6 class="text-[18px] font-bold mb-3 text-white">
+            Custom PNL Cards
+          </h6>
+          <p class="text-[#b0b0b0] text-[14px] leading-relaxed">
+            Flex your holdings with a collection of curated Trojan originals, or
+            use your own. You choose.
+          </p>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-trojan-green/30 hover:-translate-y-1 transition-all duration-300"
+        >
+          <h6 class="text-[18px] font-bold mb-3 text-white">
+            And much more...
+          </h6>
+          <p class="text-[#b0b0b0] text-[14px] leading-relaxed">
+            All the tools you need to conquer onchain, and everything else to
+            stay ahead.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arena Section -->
+    <section class="max-w-[1360px] mx-auto my-[120px] px-5 md:px-10" id="arena">
+      <div
+        class="bg-gradient-to-br from-[rgba(0,255,135,0.08)] to-[rgba(96,239,255,0.08)] border border-trojan-green/20 rounded-3xl p-10 md:p-20 text-center relative overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 bg-[url('data:image/svg+xml,<svg width=\u0022100\u0022 height=\u0022100\u0022 xmlns=\u0022http://www.w3.org/2000/svg\u0022><rect fill=\u0022rgba(255,255,255,0.01)\u0022 width=\u0022100\u0022 height=\u0022100\u0022/></svg>')] opacity-50 pointer-events-none"
+        ></div>
+
+        <div class="relative z-10">
+          <div
+            class="text-[14px] font-bold tracking-[2px] text-trojan-green mb-4"
+          >
+            INTRODUCING
+          </div>
+          <h1
+            class="text-[36px] md:text-[64px] font-black mb-6 text-transparent bg-clip-text bg-gradient-to-br from-trojan-green to-trojan-blue"
+          >
+            THE ARENA
+          </h1>
+          <p
+            class="text-[20px] text-[#b0b0b0] max-w-[800px] mx-auto mb-10 leading-relaxed"
+          >
+            Climb the ranks to unlock massive rewards. Stack SOL, conquer
+            leaderboards, and watch the Gold rewards pile up.
+          </p>
+          <a
+            href="./arena"
+            class="inline-block bg-gradient-to-br from-trojan-green to-trojan-blue text-black px-10 py-3.5 rounded-lg font-semibold text-[17px] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,255,135,0.4)] transition-all"
+            >ENTER THE ARENA</a
+          >
+
+          <div
+            class="mt-16 w-full h-[400px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] rounded-2xl flex items-center justify-center text-[#666] border border-trojan-green/10"
+          >
+            Arena Leaderboard & Rewards
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="max-w-[1360px] mx-auto my-[120px] px-5 md:px-10">
+      <div class="text-center max-w-[1000px] mx-auto">
+        <div
+          class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-trojan-green to-trojan-blue rounded-[20px] flex items-center justify-center text-[32px]"
+        >
+          🔒
+        </div>
+        <h2 class="text-[36px] md:text-[48px] font-extrabold mb-6 text-white">
+          Self-Custody Wallets and Infrastructure
+        </h2>
+        <p class="text-[18px] text-[#b0b0b0] leading-relaxed mb-[60px]">
+          Trade without compromise. Trojan delivers true self-custody wallets
+          with Privy's scalable, battle-tested infrastructure giving you the
+          speed, security, and precision to trade onchain. With advanced
+          protection. Trojan keeps your keys safe and your crypto in your
+          control. Your keys. Your crypto. Always.
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mt-[60px]">
+          <div class="text-center">
+            <h3 class="text-[18px] font-bold text-trojan-green mb-2">
+              Trusted Hardware
+            </h3>
+          </div>
+          <div class="text-center">
+            <h3 class="text-[18px] font-bold text-trojan-green mb-2">
+              Non-Custodial
+            </h3>
+          </div>
+          <div class="text-center">
+            <h3 class="text-[18px] font-bold text-trojan-green mb-2">
+              Enterprise-Grade
+            </h3>
+          </div>
+          <div class="text-center">
+            <h3 class="text-[18px] font-bold text-trojan-green mb-2">
+              Fully Verifiable
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Partners -->
+    <section
+      class="max-w-[1360px] mx-auto my-[120px] px-5 md:px-10"
+      id="partners"
+    >
+      <h2
+        class="text-[36px] md:text-[48px] font-extrabold text-center mb-6 text-white"
+      >
+        Our Community Partners
+      </h2>
+      <p
+        class="text-[#b0b0b0] text-[18px] text-center max-w-[800px] mx-auto mb-[60px] leading-relaxed"
+      >
+        As a longstanding member of the Solana ecosystem, Trojan strives to
+        support and reenforce the growth of the network through collaboration
+        and innovation. Trojan partners with leading Community projects,
+        builders, and protocols to strengthen activity and grow the culture of
+        onchain trading.
+      </p>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+      >
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 hover:border-trojan-green/30 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[200px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm"
+          >
+            MONKEDAO
+          </div>
+          <div class="p-5 text-center font-bold text-[16px]">MONKEDAO</div>
+        </div>
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 hover:border-trojan-green/30 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[200px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm"
+          >
+            BORYOKU
+          </div>
+          <div class="p-5 text-center font-bold text-[16px]">BORYOKU</div>
+        </div>
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 hover:border-trojan-green/30 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[200px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm"
+          >
+            SLERF
+          </div>
+          <div class="p-5 text-center font-bold text-[16px]">SLERF</div>
+        </div>
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 hover:border-trojan-green/30 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[200px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm"
+          >
+            PLAY
+          </div>
+          <div class="p-5 text-center font-bold text-[16px]">PLAY</div>
+        </div>
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 hover:border-trojan-green/30 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[200px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm"
+          >
+            PORTALS
+          </div>
+          <div class="p-5 text-center font-bold text-[16px]">PORTALS</div>
+        </div>
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 hover:border-trojan-green/30 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[200px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm"
+          >
+            FWOG
+          </div>
+          <div class="p-5 text-center font-bold text-[16px]">FWOG</div>
+        </div>
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 hover:border-trojan-green/30 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[200px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm"
+          >
+            MEW
+          </div>
+          <div class="p-5 text-center font-bold text-[16px]">MEW</div>
+        </div>
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 hover:border-trojan-green/30 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[200px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm"
+          >
+            $WIF
+          </div>
+          <div class="p-5 text-center font-bold text-[16px]">$WIF</div>
+        </div>
+        <div
+          class="bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 hover:border-trojan-green/30 transition-all duration-300"
+        >
+          <div
+            class="w-full h-[200px] bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] flex items-center justify-center text-[#666] text-sm"
+          >
+            WEN
+          </div>
+          <div class="p-5 text-center font-bold text-[16px]">WEN</div>
+        </div>
+      </div>
+
+      <button
+        class="block mx-auto mt-10 px-8 py-3 bg-transparent border border-white/20 text-white rounded-lg font-semibold cursor-pointer hover:bg-white/5 hover:border-trojan-green hover:text-trojan-green transition-all duration-300"
+      >
+        Show More
+      </button>
+    </section>
+
+    <!-- Telegram Bot Section 2 -->
+    <section class="max-w-[1360px] mx-auto my-[120px] px-5 md:px-10">
+      <div
+        class="bg-gradient-to-br from-[#1a1a2e] to-[#0f0f1e] rounded-3xl p-10 md:p-20 text-center relative overflow-hidden border border-[#60efff]/20"
+      >
+        <div
+          class="absolute -top-1/2 -right-1/2 w-[200%] h-[200%] bg-[radial-gradient(circle,rgba(96,239,255,0.1)_0%,transparent_70%)] pointer-events-none"
+        ></div>
+
+        <div class="relative z-10">
+          <div
+            class="w-[120px] h-[40px] bg-gradient-to-br from-trojan-green to-trojan-blue rounded-lg mx-auto mb-5 flex items-center justify-center font-bold text-black"
+          >
+            TELEGRAM
+          </div>
+          <h2 class="text-[36px] md:text-[42px] font-extrabold mb-5 text-white">
+            Trade Faster with the Leading Telegram Bot for Solana
+          </h2>
+          <p
+            class="text-[18px] text-[#b0b0b0] max-w-[700px] mx-auto mb-10 leading-relaxed"
+          >
+            Trade seamlessly and securely with Trojan on Solana. Our bots
+            consistently outperform and overdeliver so you never miss a move. Be
+            First. Every Trade.
+          </p>
+          <a
+            href="https://trojanonsolana.com/"
+            class="inline-block bg-gradient-to-br from-trojan-green to-trojan-blue text-black px-8 py-3.5 rounded-lg font-semibold text-[16px] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,255,135,0.4)] transition-all"
+            >Launch on Telegram</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="max-w-[1000px] mx-auto my-[120px] px-5 md:px-10" id="faqs">
+      <h2
+        class="text-[36px] md:text-[48px] font-extrabold text-center mb-5 text-white"
+      >
+        FAQs
+      </h2>
+      <p class="text-center text-[#b0b0b0] mb-[60px] text-[16px]">
+        Have a question that wasn't answered? Check out the
+        <a
+          href="http://docs.trojan.com"
+          class="text-trojan-green border-b border-trojan-green no-underline hover:opacity-70 transition-opacity"
+          >Trojan Docs</a
+        >
+      </p>
+
+      <div class="space-y-4">
+        <div
+          class="bg-white/5 border border-white/10 rounded-xl p-6 cursor-pointer hover:bg-white/10 hover:border-trojan-green/30 transition-all duration-300 group"
+        >
+          <div
+            class="flex justify-between items-center text-[17px] font-semibold text-white"
+          >
+            What is Trojan's Terminal?
+            <span
+              class="text-[#666] text-[20px] transition-transform duration-300 group-hover:text-trojan-green group-hover:rotate-90"
+              >+</span
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-xl p-6 cursor-pointer hover:bg-white/10 hover:border-trojan-green/30 transition-all duration-300 group"
+        >
+          <div
+            class="flex justify-between items-center text-[17px] font-semibold text-white"
+          >
+            What is non-custodial and how does it ensure trust?
+            <span
+              class="text-[#666] text-[20px] transition-transform duration-300 group-hover:text-trojan-green group-hover:rotate-90"
+              >+</span
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-xl p-6 cursor-pointer hover:bg-white/10 hover:border-trojan-green/30 transition-all duration-300 group"
+        >
+          <div
+            class="flex justify-between items-center text-[17px] font-semibold text-white"
+          >
+            Can I earn rewards and SOL on Trojan?
+            <span
+              class="text-[#666] text-[20px] transition-transform duration-300 group-hover:text-trojan-green group-hover:rotate-90"
+              >+</span
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-xl p-6 cursor-pointer hover:bg-white/10 hover:border-trojan-green/30 transition-all duration-300 group"
+        >
+          <div
+            class="flex justify-between items-center text-[17px] font-semibold text-white"
+          >
+            What is the minimum amount of SOL needed to start trading with
+            Trojan Terminal efficiently?
+            <span
+              class="text-[#666] text-[20px] transition-transform duration-300 group-hover:text-trojan-green group-hover:rotate-90"
+              >+</span
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-xl p-6 cursor-pointer hover:bg-white/10 hover:border-trojan-green/30 transition-all duration-300 group"
+        >
+          <div
+            class="flex justify-between items-center text-[17px] font-semibold text-white"
+          >
+            Is Trojan really the fastest platform?
+            <span
+              class="text-[#666] text-[20px] transition-transform duration-300 group-hover:text-trojan-green group-hover:rotate-90"
+              >+</span
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-xl p-6 cursor-pointer hover:bg-white/10 hover:border-trojan-green/30 transition-all duration-300 group"
+        >
+          <div
+            class="flex justify-between items-center text-[17px] font-semibold text-white"
+          >
+            Is there a fee to use Trojan Terminal?
+            <span
+              class="text-[#666] text-[20px] transition-transform duration-300 group-hover:text-trojan-green group-hover:rotate-90"
+              >+</span
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-xl p-6 cursor-pointer hover:bg-white/10 hover:border-trojan-green/30 transition-all duration-300 group"
+        >
+          <div
+            class="flex justify-between items-center text-[17px] font-semibold text-white"
+          >
+            What slippage and gas settings does Trojan recommend?
+            <span
+              class="text-[#666] text-[20px] transition-transform duration-300 group-hover:text-trojan-green group-hover:rotate-90"
+              >+</span
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-xl p-6 cursor-pointer hover:bg-white/10 hover:border-trojan-green/30 transition-all duration-300 group"
+        >
+          <div
+            class="flex justify-between items-center text-[17px] font-semibold text-white"
+          >
+            Can I use Trojan Terminal without a wallet?
+            <span
+              class="text-[#666] text-[20px] transition-transform duration-300 group-hover:text-trojan-green group-hover:rotate-90"
+              >+</span
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-xl p-6 cursor-pointer hover:bg-white/10 hover:border-trojan-green/30 transition-all duration-300 group"
+        >
+          <div
+            class="flex justify-between items-center text-[17px] font-semibold text-white"
+          >
+            What happens to my trades if I'm offline?
+            <span
+              class="text-[#666] text-[20px] transition-transform duration-300 group-hover:text-trojan-green group-hover:rotate-90"
+              >+</span
+            >
+          </div>
+        </div>
+        <div
+          class="bg-white/5 border border-white/10 rounded-xl p-6 cursor-pointer hover:bg-white/10 hover:border-trojan-green/30 transition-all duration-300 group"
+        >
+          <div
+            class="flex justify-between items-center text-[17px] font-semibold text-white"
+          >
+            Where can I get help or learn more if I have questions about Trojan?
+            <span
+              class="text-[#666] text-[20px] transition-transform duration-300 group-hover:text-trojan-green group-hover:rotate-90"
+              >+</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section
+      class="max-w-[1360px] mx-auto my-[120px] px-5 md:px-10 text-center relative rounded-[24px] overflow-hidden bg-gradient-to-br from-[rgba(0,255,135,0.05)] to-[rgba(96,239,255,0.05)] py-[100px]"
+    >
+      <div
+        class="absolute -top-1/2 -left-1/2 w-[200%] h-[200%] bg-[radial-gradient(circle,rgba(0,255,135,0.1)_0%,transparent_70%)] pointer-events-none"
+      ></div>
+
+      <div class="relative z-10">
+        <h1
+          class="text-[36px] md:text-[56px] font-black mb-6 max-w-[900px] mx-auto text-white"
+        >
+          The Blockchain is for Everyone, We Make it Better to Trade.
+        </h1>
+        <p class="text-[18px] md:text-[20px] text-[#b0b0b0] mb-10">
+          Our architecture is built from the ground-up to be the fastest and
+          most accurate on the market.
+        </p>
+        <a
+          href="https://trojan.com/terminal"
+          class="inline-block bg-gradient-to-br from-trojan-green to-trojan-blue text-black px-10 py-4 rounded-lg font-semibold text-[17px] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,255,135,0.4)] transition-all"
+          >Trade Instantly</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 pt-20 pb-10 px-5 md:px-10">
+      <div
+        class="max-w-[1360px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10 md:gap-[60px] mb-[60px]"
+      >
+        <div class="flex flex-col">
+          <div
+            class="w-10 h-12 bg-gradient-to-br from-trojan-green to-trojan-blue clip-hex mb-5"
+          ></div>
+          <p class="text-[#666] text-[14px] leading-relaxed mb-5">
+            Smarter Trading and Seamless Exchanges.
+          </p>
+        </div>
+
+        <div class="flex flex-col">
+          <h4 class="text-[16px] font-bold mb-5 text-white">Resources</h4>
+          <a
+            href="./arena"
+            class="block text-[#b0b0b0] mb-3 text-[15px] hover:text-trojan-green transition-colors"
+            >The Arena</a
+          >
+          <a
+            href="https://docs.trojan.com/"
+            class="block text-[#b0b0b0] mb-3 text-[15px] hover:text-trojan-green transition-colors"
+            >Documentation</a
+          >
+          <a
+            href="#"
+            class="block text-[#b0b0b0] mb-3 text-[15px] hover:text-trojan-green transition-colors"
+            >Support</a
+          >
+          <a
+            href="./blog"
+            class="block text-[#b0b0b0] mb-3 text-[15px] hover:text-trojan-green transition-colors"
+            >Blog</a
+          >
+        </div>
+
+        <div class="flex flex-col">
+          <h4 class="text-[16px] font-bold mb-5 text-white">Company</h4>
+          <a
+            href="https://vg.linkedin.com/company/trojan"
+            class="block text-[#b0b0b0] mb-3 text-[15px] hover:text-trojan-green transition-colors"
+            >Careers</a
+          >
+          <a
+            href="https://dune.com/trojan/dashboard/3d8f09a0-3140-4c84-94f2-cbc51edbdfcd"
+            class="block text-[#b0b0b0] mb-3 text-[15px] hover:text-trojan-green transition-colors"
+            >Dashboard</a
+          >
+          <a
+            href="./privacy-policy"
+            class="block text-[#b0b0b0] mb-3 text-[15px] hover:text-trojan-green transition-colors"
+            >Privacy Policy</a
+          >
+          <a
+            href="./terms-of-use"
+            class="block text-[#b0b0b0] mb-3 text-[15px] hover:text-trojan-green transition-colors"
+            >Terms of Use</a
+          >
+        </div>
+
+        <div class="flex flex-col">
+          <h4 class="text-[16px] font-bold mb-5 text-white">Socials</h4>
+          <a
+            href="https://x.com/TrojanOnSolana"
+            class="block text-[#b0b0b0] mb-3 text-[15px] hover:text-trojan-green transition-colors"
+            >Twitter / X</a
+          >
+          <a
+            href="https://www.tiktok.com/@trojan"
+            class="block text-[#b0b0b0] mb-3 text-[15px] hover:text-trojan-green transition-colors"
+            >Tiktok</a
+          >
+          <a
+            href="https://www.instagram.com/trojan/"
+            class="block text-[#b0b0b0] mb-3 text-[15px] hover:text-trojan-green transition-colors"
+            >Instagram</a
+          >
+          <a
+            href="https://www.youtube.com/@trojan"
+            class="block text-[#b0b0b0] mb-3 text-[15px] hover:text-trojan-green transition-colors"
+            >Youtube</a
+          >
+        </div>
+      </div>
+
+      <div
+        class="max-w-[1360px] mx-auto pt-10 border-t border-white/10 text-center text-[#666] text-[14px]"
+      >
+        <p>© 2026 Trojan Trading. All rights reserved. | Systems Operational</p>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

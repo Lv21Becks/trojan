@@ -7,59 +7,7 @@
   <title>Trojan Terminal</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="newterminal.html" />
-  <style type="text/css">
-    /* Mobile Layout Enforcement */
-    /* Mobile Layout Enforcement */
-    @media (max-width: 1024px) {
-      #terminal-view:not(.hidden) {
-        display: flex !important;
-        flex-direction: column !important;
-        height: auto !important;
-        overflow-y: auto !important;
-        gap: 16px !important;
-        padding: 10px !important;
-        padding-bottom: 100px !important;
-      }
 
-      /* 1. Trading (Top) - Chart */
-      #trading-column {
-        display: flex !important;
-        flex-direction: column !important;
-        order: 1 !important;
-        width: 100% !important;
-        flex: none !important;
-        height: auto !important;
-        min-height: 500px !important;
-      }
-
-      /* 2. Swap (Middle) - Interaction */
-      #swap-column {
-        order: 2 !important;
-        width: 100% !important;
-        flex: none !important;
-        min-height: auto !important;
-        margin-bottom: 16px !important;
-      }
-
-      /* 3. Analytics (Bottom) - Data */
-      #analytics-column {
-        order: 3 !important;
-        width: 100% !important;
-        flex: none !important;
-        min-height: 400px !important;
-      }
-
-      /* Utility: Hide Desktop Elements */
-      .desktop-only {
-        display: none !important;
-      }
-
-      /* Ensure text is readable */
-      body {
-        overflow-x: hidden;
-      }
-    }
-  </style>
   <style type="text/css">
     :root {
       --toastify-color-light: #fff;
